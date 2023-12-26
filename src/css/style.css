@@ -247,3 +247,21 @@ body {
   font-weight: var(--fw-bold);
   font-size: 1rem;
 }
+
+@media (max-width: 41rem) {
+  .statistics {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    padding: 3rem 1rem;
+  }
+
+  .wrapper {
+    --width: 25rem;
+  }
+
+  .summary {
+    padding: 2rem 1rem;
+  }
+}
