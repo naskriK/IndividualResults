@@ -1,0 +1,249 @@
+/* hanken-grotesk-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/hanken-grotesk-v8-latin-regular.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* hanken-grotesk-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/hanken-grotesk-v8-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* hanken-grotesk-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../assets/fonts/hanken-grotesk-v8-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* hanken-grotesk-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/hanken-grotesk-v8-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* hanken-grotesk-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../assets/fonts/hanken-grotesk-v8-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+  --primary-ff: "Hanken Grotesk", sans-serif;
+
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  --color-reaction: 0, 100%, 67%;
+  --color-memory: 39, 100%, 56%;
+  --color-verbal: 166, 100%, 37%;
+  --color-visual: 234, 85%, 45%;
+
+  --color-neutral: hsl(0, 0%, 100%);
+  --color-heading: hsl(221, 100%, 96%);
+  --color-text: hsl(241, 100%, 89%);
+  --color-button: hsl(224, 30%, 27%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--primary-ff);
+}
+
+.content {
+  min-height: 100vh;
+  background-color: var(--color-neutral);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.wrapper {
+  --width: 39rem;
+  max-width: var(--width);
+  margin: 0 auto;
+}
+
+.statistics {
+  --radius: 30px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.09);
+}
+
+.statistics__result {
+  --slate-blue: hsl(252, 100%, 67%);
+  --royal-blue: hsl(241, 81%, 54%);
+
+  background-image: linear-gradient(
+    to bottom,
+    var(--slate-blue) 0%,
+    var(--royal-blue) 100%
+  );
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: center;
+}
+
+.statistics__title {
+  color: var(--color-heading);
+  margin-bottom: 2rem;
+}
+
+.statistics__value {
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+
+  --size: 11rem;
+
+  background-image: linear-gradient(
+    to bottom,
+    var(--violet-blue) 0%,
+    var(--persian-blue) 100%
+  );
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  width: var(--size);
+  height: var(--size);
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.statistics__value-current {
+  color: var(--color-neutral);
+  font-size: 4rem;
+}
+
+.statistics__value-of {
+  color: var(--color-text);
+  font-weight: var(--fw-bold);
+  opacity: 0.7;
+}
+
+.statistics__status {
+  color: var(--color-heading);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: var(--fw-bold);
+}
+
+.statistics__description {
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.summary {
+  padding: 2rem;
+}
+
+.summary__title {
+  color: var(--color-button);
+  margin-bottom: 2rem;
+}
+
+.summary__individual {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 1rem;
+  border-radius: 8px;
+}
+
+.summary__individual--reaction {
+  background-color: hsla(var(--color-reaction), 0.04);
+  color: hsl(var(--color-reaction));
+  font-weight: var(--fw-medium);
+}
+
+.summary__individual--memory {
+  background-color: hsla(var(--color-memory), 0.04);
+  color: hsl(var(--color-memory));
+  font-weight: var(--fw-medium);
+}
+
+.summary__individual--verbal {
+  background-color: hsla(var(--color-verbal), 0.04);
+  color: hsl(var(--color-verbal));
+  font-weight: var(--fw-medium);
+}
+
+.summary__individual--visual {
+  background-color: hsla(var(--color-visual), 0.04);
+  color: hsl(var(--color-visual));
+  font-weight: var(--fw-medium);
+}
+
+.summary__individuals {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.summary__results {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.summary__individual-result {
+  color: var(--color-button);
+}
+
+.summary__individual-of {
+  color: var(--color-button);
+  opacity: 0.5;
+  font-weight: var(--fw-bold);
+}
+
+.btn {
+  cursor: pointer;
+  background-color: transparent;
+  font-family: inherit;
+  border: none;
+}
+
+.btn--continue {
+  background-color: var(--color-button);
+  color: var(--color-neutral);
+  padding: 1rem 1.5rem;
+  width: 100%;
+  margin-top: 2rem;
+  border-radius: 10rem;
+  font-weight: var(--fw-bold);
+  font-size: 1rem;
+}
