@@ -22,5 +22,88 @@
 
     <title>Frontend Mentor | Results summary component</title>
   </head>
-  <body></body>
+  <body>
+    <main class="content">
+      <div class="wrapper">
+        <article class="statistics">
+          <div class="statistics__result">
+            <h1 class="statistics__title">Your Result</h1>
+            <div class="statistics__value">
+              <p class="statistics__value-current">
+                <strong>76</strong>
+              </p>
+              <p class="statistics__value-of">of 100</p>
+            </div>
+            <p class="statistics__status">Great</p>
+            <p class="statistics__description">
+              You scored higher than 65% of the people who have taken these
+              tests.
+            </p>
+          </div>
+          <div class="statistics__summary summary">
+            <h2 class="summary__title">Summary</h2>
+            <ul class="summary__individuals">
+              <li class="summary__individual summary__individual--reaction">
+                <img
+                  src="./src/assets/images/icon-reaction.svg"
+                  alt=""
+                  class="summary__icon"
+                />
+                <p class="summary__individual-title">Reaction</p>
+                <div class="summary__results">
+                  <p class="summary__individual-result">
+                    <strong>80</strong>
+                  </p>
+                  <p class="summary__individual-of">/ 100</p>
+                </div>
+              </li>
+              <li class="summary__individual summary__individual--memory">
+                <img
+                  src="./src/assets/images/icon-memory.svg"
+                  alt=""
+                  class="summary__icon"
+                />
+                <p class="summary__individual-title">Memory</p>
+                <div class="summary__results">
+                  <p class="summary__individual-result">
+                    <strong>92</strong>
+                  </p>
+                  <p class="summary__individual-of">/ 100</p>
+                </div>
+              </li>
+              <li class="summary__individual summary__individual--verbal">
+                <img
+                  src="./src/assets/images/icon-verbal.svg"
+                  alt=""
+                  class="summary__icon"
+                />
+                <p class="summary__individual-title">Verbal</p>
+                <div class="summary__results">
+                  <p class="summary__individual-result">
+                    <strong>61</strong>
+                  </p>
+                  <p class="summary__individual-of">/ 100</p>
+                </div>
+              </li>
+              <li class="summary__individual summary__individual--visual">
+                <img
+                  src="./src/assets/images/icon-visual.svg"
+                  alt=""
+                  class="summary__icon"
+                />
+                <p class="summary__individual-title">Visual</p>
+                <div class="summary__results">
+                  <p class="summary__individual-result">
+                    <strong>72</strong>
+                  </p>
+                  <p class="summary__individual-of">/ 100</p>
+                </div>
+              </li>
+            </ul>
+            <button class="btn btn--continue">Continue</button>
+          </div>
+        </article>
+      </div>
+    </main>
+  </body>
 </html>
